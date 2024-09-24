@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Details</title>
+    <link rel="icon" href="bitlo.jpeg">
+    <link rel="stylesheet" href="path/to/vendor.bundle.base.css">
+    <link rel="stylesheet" href="path/to/materialdesignicons.min.css">
+    
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(rgba(0,0,0,0.5),#cd69ee), 
+                     url('slider-03-1.jpg') center/cover no-repeat;
+        color: #fff;
+        min-height: 100vh;
+      }
+      .banner-text{
+        text-align:center;
+        color:#fff;
+        padding-top:180px;
+    }
+    .banner-text{
+        position:absolute;
+        top: 15%;
+        left:50%;
+        transform:translate(-50%,-85%);
+        width:100%;
+        text-align:center;
+        color:#fff;
+    }
+    .banner-text h1{
+        font-size:50px;
+        font-family:Georgia;
+    }
+    .banner-text p{
+        font-size:20px;
+        font-style:italic;
+    }
+    banner-btn{
+        margin:70px auto 0;
+        text-align:center;
+    }
+    .banner-btn a{
+        width:150px;
+        text-decoration:none;
+        display:inline-block;
+        margin:0 10px;
+        padding:12px 0;
+        color:#711E93;
+        border: .5px solid #711E93;
+        position:relative;
+        z-index= 1;
+        transition: color 0.5s;
+    }
+    .banner-btn a span{
+           width:0;
+           height: 100%;
+           position:absolute;
+           top:0;
+           left:0;
+           background: #cbcbcb;
+           z-index: -1; 
+    }
+    .banner-btn a:hover span{
+        width:100%;
+        transition:0.5s;
+    }
+    .banner-btn a:hover{
+        color:#cbcbcb;
+    }
+
+
+      /* Container and Grid Layout */
+      .hostel-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+        padding: 150px;
+        justify-items: center;
+      }
+
+      .card {
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        padding: 20px;
+        width: 300px;
+        text-align: center;
+        color: #000;
+      }
+
+      .card h4 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+
+      .card p {
+        font-size: 18px;
+        margin: 5px 0;
+      }
+
+      /* Footer Styling */
+      .footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #6a1b9a;
+        color: white;
+        position: absolute;
+        width: 100%;
+        bottom: -180px;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="banner">
+        <div class="banner-text">
+            <h1>Hostel Details</h1>
+        </div>
+    </section>
+    <!-- Hostel Details -->
+    <div class="hostel-container">
+      <!-- Hostel 1 -->
+      <div class="card">
+        <h4>Sapphire</h4>
+        <p>Manager: John Doe</p>
+        <p>Total Floors: III</p>
+        <p>Total Rooms: 300</p>
+        <p>Phone: +1234567890</p>
+        <div class="banner-btn">
+            <a href="sapphire.html"><span></span>Select Room</a>
+        </div>
+      </div>
+      <!-- Hostel 2 -->
+      <div class="card">
+        <h4>Ruby</h4>
+        <p>Manager: Jane Smith</p>
+        <p>Total Floors: III</p>
+        <p>Total Rooms: 300</p>
+        <p>Phone: +0987654321</p>
+        <div class="banner-btn">
+            <a href="Ruby.html"><span></span>Select Room</a>
+        </div>
+      </div>
+      <!-- Hostel 3 -->
+      <div class="card">
+        <h4>Pearl</h4>
+        <p>Manager: Mark White</p>
+        <p>Total Floors: III</p>
+        <p>Total Rooms: 300</p>
+        <p>Phone: +1122334455</p>
+        <div class="banner-btn">
+            <a href="Pearl.html"><span></span>Select Room</a>
+        </div>
+      </div>
+      <!-- Hostel 4 -->
+      <div class="card">
+        <h4>Emerald</h4>
+        <p>Manager: Lisa Brown</p>
+        <p>Total Floors: III</p>
+        <p>Total Rooms: 300</p>
+        <p>Phone: +6677889900</p>
+        <div class="banner-btn">
+            <a href="Emerald.html"><span></span>Select Room</a>
+        </div>
+      </div>
+      <!-- Hostel 5 -->
+      <div class="card">
+        <h4>Coral</h4>
+        <p>Manager: Sam Wilson</p>
+        <p>Total Floors: III</p>
+        <p>Room No: 300</p>
+        <p>Phone: +4455667788</p>
+        <div class="banner-btn">
+            <a href="Coral.html"><span></span>Select Room</a>
+        </div>
+      </div>
+      <!-- Hostel 6 -->
+      <div class="card">
+        <h4>Diamond</h4>
+        <p>Manager: Tina Turner</p>
+        <p>Total Floors: III</p>
+        <p>Total Rooms: 300</p>
+        <p>Phone: +9988776655</p>
+        <div class="banner-btn">
+            <a href="Diamond.html"><span></span>Select Room</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <span>Designed By Raahul Shivakumar</span>
+    </footer>
+
+  </body>
+</html>

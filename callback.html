@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+</head>
+<body>
+    <h1>Google OAuth Callback</h1>
+    <script>
+        const hash = window.location.hash;
+        if (hash) {
+            const params = new URLSearchParams(hash.replace('#', '?'));
+            const token = params.get('access_token');
+            alert('You are logged in with Google! Token: ' + token);
+
+            // Save the token in local storage (optional)
+            localStorage.setItem('google_token', token);
+
+            // Redirect to your main app
+            window.location.href = 'index.html';  // Change to your main app's URL
+        } else {
+            alert('No token found. Please try logging in again.');
+        }
+    </script>
+</body>
+</html>

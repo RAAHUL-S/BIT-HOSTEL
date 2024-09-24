@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Sign In / Sign Up</title>
+    <link rel="icon" href="bitlo.jpeg">
+</head>
+
+<body>
+    <div class="container">
+        <div class="signin-signup">
+            <form action="" class="sign-in-form">
+                <h2 class="title">Sign in</h2>
+                <div class="input-field">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" placeholder="Email">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password">
+                </div>
+                <input type="submit" value="Login" class="btn">
+                <p class="social-text">Or Sign in with Google</p>
+                <div class="social-media">
+                    <a href="#" class="social-icon" onclick="handleGoogleSignIn()">
+                        <i class="fab fa-google"></i>
+                    </a>
+                </div>
+                <p class="account-text">Don't have an account? <a href="#" id="sign-up-btn2">Sign up</a></p>
+            </form>
+            <form action="" class="sign-up-form">
+                <h2 class="title">Sign up</h2>
+                <div class="input-field">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" placeholder="Email">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="text" placeholder="Password">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Confirm Password">
+                </div>
+                <input type="submit" value="Sign up" class="btn">
+                <p class="social-text">Or Sign in with Google</p>
+                <div class="social-media">
+                    <a href="#" class="social-icon" onclick="handleGoogleSignIn()">
+                        <i class="fab fa-google"></i>
+                    </a>
+                </div>
+                <p class="account-text">Already have an account? <a href="#" id="sign-in-btn2">Sign in</a></p>
+            </form>
+        </div>
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>Already a Bitian</h3>
+                    <button class="btn" id="sign-in-btn">Sign in</button>
+                </div>
+                <img src="logo.png" alt="" class="image">
+            </div>
+            <div class="panel right-panel">
+                <div class="content">
+                    
+                    
+                </div>
+                <img src="logo.png" alt="" class="image">
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function handleGoogleSignIn() {
+            const clientId = '307769713482-7lbs6ubk6kh3g4c7p50eai8kjsa5t70c.apps.googleusercontent.com'; // Replace with your Client ID
+            const redirectUri = 'http://localhost/Myproject/callback.html'; // Ensure this matches your redirect URI
+
+            // Create the OAuth 2.0 URL
+            const authUrl = `https://accounts.google.com/o/oauth2/v2/auth?` +
+                `client_id=${clientId}&` +
+                `redirect_uri=${redirectUri}&` +
+                `response_type=token&` +
+                `scope=email profile`;
+
+            // Redirect to Google sign-in
+            window.location.href = authUrl;
+        }
+
+        // Handle the redirect back to your site
+        window.onload = function() {
+            const hash = window.location.hash;
+            if (hash) {
+                const params = new URLSearchParams(hash.replace('#', '?'));
+                const token = params.get('access_token');
+                if (token) {
+                    // You can use the token to access user info or send it to your backend
+                    alert('Logged in with Google!');
+
+                    // Redirect to index.html after successful login
+                    window.location.href = 'index.html'; // Change to your main page
+                }
+            }
+        };
+    </script>
+</body>
+
+</html>
